@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rickyarmnd/dicoding-backend_pemula/issues"
   },
-  "homepage": "https://github.com/rickyarmnd/dicoding-backend_pemula#readme"
+  "homepage": "https://github.com/rickyarmnd/dicoding-backend_pemula#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
