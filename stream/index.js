@@ -13,16 +13,17 @@ const readableStream = fs.createReadStream("stream/input.txt", {
 let word = "";
 readableStream.on("readable", () => {
     try {
-        let teks;
-        while ( (teks = readableStream.read()) !== null) {
+        let teks = readableStream.read();
         word += `${teks.toString()}, \n`
-        }
         // console.log(`Teksnya adalah : ${word}`);
     } catch (error) {
         //Error Handling
     }
 });
 
+readableStream.on('end' , () => {
+    console.log(word)
+})
 readableStream.on("end", () => {
     try {
         // console.log(output)
